@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title>Random Food Generator</title>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>This is the random food generator</h1>
+            <form action="/GetFood" id="GetFood" method="GET">
+                <button type="submit">Generate</button>
+            </form>
+        </header>
+
+        <% if (locals.meal) { %>
+            <h1><%= mealName %></h1>
+        <% } else { %>
+            <h1>Click on "Generate" to generate a random food</h1>
+        <% } %>
+
+        <% if (locals.meal) { %>
+        <div class="main-content">
+            <div class="image-container">
+                <img src="<%= mealImage %>" alt="Food Image" width="500px">
+            </div>
+
+            <div class="ingredients-container">
+                <div>
+                    <h2>Ingredients</h2>
+                    <ul >
+                        <% mealIngredients.forEach(item => { %>
+                            <li><%= item.measure %> <%= item.ingredient %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="instructions-container">
+                <div>
+                    <h2>Instructions: </h2>
+                    <p><%= mealInstructions %></p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <h3>used API: <a href="https://www.themealdb.com/api.php"> https://www.themealdb.com/api.php</a> </h3>
+        </footer>
+
+    </div>
+    <% } %>
+
+</body>
+</html>

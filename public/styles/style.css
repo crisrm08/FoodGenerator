@@ -1,0 +1,133 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+body h1{
+    text-align: center;
+}
+
+header {
+    background-color: #F3CA52;
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: baseline;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    margin-left: 25px;
+}
+
+header button {
+    width: 200px;
+    height: 50px;
+    font-size: xx-large;
+    border-radius: 20px;
+    background-color: #7ABA78;
+    border-color: #F3CA52;
+    margin-left: 150px;
+}
+
+footer {
+    background-color: #0A6847;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+}
+
+footer h3 {
+    margin-left: 50px;
+}
+
+.container {
+    flex: 1; 
+    background-color: #F6E9B2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-content {
+    margin-left: 80px;
+    display: grid;
+    width: 90%;
+    grid-template-columns: 45%;
+    grid-template-rows: 60%;
+    gap: 3px;
+    flex: 1; 
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 0;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    overflow: hidden;
+    border-top-left-radius: 50px;
+}
+
+.image-container img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    max-width: 100%; 
+    object-fit: cover; 
+}
+
+
+.ingredients-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #7ABA78;
+    font-size: x-large;
+    overflow: scroll;
+    border-top-right-radius: 50px;
+}
+
+
+.instructions-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 50px;
+    background-color: #F3CA52;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.list-group-item {
+    border: none;
+    background-color: transparent;
+    padding: 5px 0;
+}
+
+.list-group-item-warning {
+    background-color: #f3ca52;
+}
